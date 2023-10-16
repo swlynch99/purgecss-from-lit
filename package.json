@@ -1,0 +1,23 @@
+{
+  "name": "purgecss-from-lit",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Sean Lynch <sean@lynches.ca>",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "dev": "tsup src/index.ts --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {}
+}
