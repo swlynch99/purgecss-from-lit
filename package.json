@@ -22,7 +22,8 @@
     "build": "tsup src/index.ts",
     "dev": "tsup src/index.ts --watch",
     "test": "vitest --watch",
-    "ci": "vitest"
+    "ci": "vitest",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@typescript-eslint/typescript-estree": "^6.7.5",
