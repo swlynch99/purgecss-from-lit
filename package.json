@@ -7,6 +7,7 @@
   "repository": {
     "url": "https://github.com/swlynch99/purgecss-from-lit"
   },
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
