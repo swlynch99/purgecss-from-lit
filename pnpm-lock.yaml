@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  lit-html: link:../lit/packages/lit-html
-
 dependencies:
   '@typescript-eslint/typescript-estree':
     specifier: ^6.7.5
@@ -22,9 +19,6 @@ devDependencies:
   '@types/node':
     specifier: ^20.8.6
     version: 20.8.6
-  lit-html:
-    specifier: link:../lit/packages/lit-html
-    version: link:../lit/packages/lit-html
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.8.6)(typescript@5.2.2)
