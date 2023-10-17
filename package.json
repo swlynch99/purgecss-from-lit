@@ -12,12 +12,26 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts",
-    "dev": "tsup src/index.ts --watch"
+    "dev": "tsup src/index.ts --watch",
+    "test": "vitest --watch",
+    "ci": "vitest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@typescript-eslint/typescript-estree": "^6.7.5",
+    "estree-walker": "^3.0.3",
+    "purgecss-from-html": "^5.0.0"
+  },
   "devDependencies": {
+    "@types/node": "^20.8.6",
+    "lit-html": "^3.0.0",
+    "ts-node": "^10.9.1",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
-  "peerDependencies": {}
+  "pnpm": {
+    "overrides": {
+      "lit-html": "link:../lit/packages/lit-html"
+    }
+  }
 }
