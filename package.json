@@ -1,14 +1,22 @@
 {
-  "name": "purgecss-from-lit",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@swlynch99/purgecss-from-lit",
+  "version": "0.1.0",
+  "description": "Extract css selectors for use by purgecss from lit components",
   "license": "MIT",
   "author": "Sean Lynch <sean@lynches.ca>",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/swlynch99/purgecss-from-lit"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
-    "/dist"
+    "/dist",
+    "/src"
   ],
   "scripts": {
     "build": "tsup src/index.ts",
@@ -28,10 +36,5 @@
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
-  },
-  "pnpm": {
-    "overrides": {
-      "lit-html": "link:../lit/packages/lit-html"
-    }
   }
 }
