@@ -1,25 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`lit property template value 1`] = `
-{
-  "attributes": {
-    "names": [],
-    "values": [],
-  },
-  "classes": [
-    "placeholder4097889236a2af26c293033feb964c4cf118c0224e0d063fec0a89e9d0569ef2",
-  ],
-  "ids": [],
-  "tags": [
-    "head",
-    "div",
-    "body",
-    "html",
-  ],
-  "undetermined": [],
-}
-`;
-
 exports[`multiple HTML elements 1`] = `
 {
   "attributes": {
@@ -63,6 +43,26 @@ exports[`template with attribute 1`] = `
   },
   "classes": [
     "blah",
+  ],
+  "ids": [],
+  "tags": [
+    "head",
+    "div",
+    "body",
+    "html",
+  ],
+  "undetermined": [],
+}
+`;
+
+exports[`template with proprty value 1`] = `
+{
+  "attributes": {
+    "names": [],
+    "values": [],
+  },
+  "classes": [
+    "placeholder4097889236a2af26c293033feb964c4cf118c0224e0d063fec0a89e9d0569ef2",
   ],
   "ids": [],
   "tags": [

@@ -6,7 +6,7 @@ import { placeholder } from '../src/placeholder';
 
 const plugin = purgeFromLit();
 
-test('lit property template value', () => {
+test('template with proprty value', () => {
     expect(plugin('html`<div class=${thang}></div>`'))
         .toMatchSnapshot()
 })
@@ -30,7 +30,7 @@ test('template within a template', () => {
     expect(result.attributes.names).includes("data-tooltip");
 })
 
-test('template boolean attribute', () => {
+test('template with boolean attribute', () => {
     const result = plugin(`
         html\`<span ?hidden=\${value}></span>\`
     `);
