@@ -1,20 +1,14 @@
 import { TSESTreeOptions, parse } from '@typescript-eslint/typescript-estree';
 import { walk } from 'estree-walker';
-import { createHash } from 'crypto';
 import parseHtml, { ExtractorResultDetailed } from 'purgecss-from-html';
 
 import { placeholder } from './placeholder';
 
 export type { ExtractorResultDetailed } from 'purgecss-from-html';
-export type { TSESTreeOptions } from '@typescript-eslint/typescript-estree';
 
 export type PluginOptions = TSESTreeOptions;
 
 type PluginFunction = (content: string) => ExtractorResultDetailed;
-
-const defaultOptions: TSESTreeOptions = {
-  allowInvalidAST: true,
-}
 
 /**
  * Create a function to extract selectors from lit web components.
@@ -25,14 +19,7 @@ const defaultOptions: TSESTreeOptions = {
  * @param options - `@typescript-eslint/typescript-estree` options.
  * @returns a function to extract selectors from lit web components.
  */
-export default function purgeFromLit(options?: TSESTreeOptions): PluginFunction {
-  return purgeFromLitImpl({
-    ...defaultOptions,
-    ...(options || {})
-  });
-}
-
-function purgeFromLitImpl(options: TSESTreeOptions) {
+export default function purgeFromLit(options?: PluginOptions): PluginFunction {
   return (content: string): ExtractorResultDetailed => {
     const ast = parse(content, options);
 
@@ -94,8 +81,6 @@ function purgeFromLitImpl(options: TSESTreeOptions) {
       tags: [...tags],
       undetermined: [...undetermined]
     }
-
-    throw "not implemented yet"
   }
 }
 
