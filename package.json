@@ -1,6 +1,6 @@
 {
   "name": "@swlynch99/purgecss-from-lit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Extract css selectors for use by purgecss from lit components",
   "license": "MIT",
   "author": "Sean Lynch <sean@lynches.ca>",
